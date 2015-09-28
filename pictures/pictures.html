@@ -1,0 +1,43 @@
+<head>
+  <title>pictures</title>
+</head>
+
+<body>
+<div class="container">
+  {{> hello}}
+</div>
+</body>
+
+<template name="hello">
+  <div class="col-md-4 push-down">
+  	<div class="panel panel-default">
+  		<div class="panel-heading">
+  			<h3 class="panel-title">Upload Section</h3>
+  		</div>
+  		<div class="panel-body">
+  			<p>
+  				Add Files
+  				<span class="btn btn-default btn-file">
+  					<input multiple type="file" class="file fileInput">
+  				</span>
+  			</p>
+  		</div>
+  		<table class="table table-hover table-striped table-bordered">
+  					<thead>
+  						<th>Names</th>
+  						<th>Downloads</th>
+  					</thead>
+  					<tbody>
+  					{{#each uploads}}
+  						<tr>
+  							<td>{{name}}</td>
+  							<td>
+  								<a href="{{url download=true}}" class="btn btn-primary">Download</a>
+  							</td>
+  						</tr>
+  					{{/each}}
+  					</tbody>
+  				</table>
+  	</div>
+  </div>
+</template>

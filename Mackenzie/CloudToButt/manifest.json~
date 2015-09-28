@@ -1,0 +1,10 @@
+{
+  "name": "CloudToButt",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Converts clouds to butts. Demo for NewHaven.io Chrome Extension Workshop.",
+  "content_scripts": [{
+    "matches": ["http://*/*", "https://*/*"],
+    "js": ["cloudToButt.js"]
+  }]
+}
